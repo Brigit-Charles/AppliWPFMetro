@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp2", "ConsoleApp2\ConsoleApp2.csproj", "{34B6A7C5-0EE6-432C-863A-7877AA38CA4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dll_Metro", "Dll_Metro\Dll_Metro.csproj", "{1961880B-74FA-4B99-93E1-9598F44BC9D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{CB5B342D-F7B6-478D-90AB-AF51B85611DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34B6A7C5-0EE6-432C-863A-7877AA38CA4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34B6A7C5-0EE6-432C-863A-7877AA38CA4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34B6A7C5-0EE6-432C-863A-7877AA38CA4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34B6A7C5-0EE6-432C-863A-7877AA38CA4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1961880B-74FA-4B99-93E1-9598F44BC9D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1961880B-74FA-4B99-93E1-9598F44BC9D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1961880B-74FA-4B99-93E1-9598F44BC9D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1961880B-74FA-4B99-93E1-9598F44BC9D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB5B342D-F7B6-478D-90AB-AF51B85611DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB5B342D-F7B6-478D-90AB-AF51B85611DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB5B342D-F7B6-478D-90AB-AF51B85611DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB5B342D-F7B6-478D-90AB-AF51B85611DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C71F85A6-7EA4-4066-A624-AF7F9C4A6E53}
+	EndGlobalSection
+EndGlobal

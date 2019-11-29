@@ -1,0 +1,125 @@
+﻿<Window x:Class="WpfApp1.MainWindow" 
+         Icon="/images/icoMobilite.ico"  
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+        mc:Ignorable="d"
+        Title="Avec la Métro trouve ton bus et ne rentre plus jamais à pieds !" Height="1000" Width="800"
+        Loaded="MyMainView_Loaded"
+        x:Name="myMainView">
+    
+        <Window.Resources> 
+
+        <FontFamily x:Key="Jinky">/Fonts/#Jinky</FontFamily>
+    
+        <BitmapImage x:Key="Logo" UriSource="/images/icoMobilite.png"></BitmapImage>
+        <BitmapImage x:Key="bck" UriSource="/images/bck.png"></BitmapImage>
+
+        <ControlTemplate x:Key="TextBoxBaseControlTemplate" TargetType="{x:Type TextBoxBase}">
+            <Border Background="{TemplateBinding Background}" 
+                x:Name="Bd" BorderBrush="IndianRed"
+                BorderThickness="3" CornerRadius="20">
+                <ScrollViewer x:Name="PART_ContentHost"/>
+            </Border>
+        </ControlTemplate>
+         
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="None" ImageSource="Images/bck.png" AlignmentY="Top" AlignmentX="Center"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*" />
+            <RowDefinition Height="0.45*" />
+            <RowDefinition Height="0.18*" />
+            <RowDefinition Height="0.3*" /> 
+        </Grid.RowDefinitions>
+
+        <TextBlock FontFamily="Jinky" FontSize="70" TextWrapping="Wrap" TextAlignment="Center" Background="#ffed00" Padding="0 20" FontWeight="Bold" Margin="0 0 0 50" Grid.ColumnSpan="4">Avec la METRO Trouve ton BUS !</TextBlock>
+        <!-- Image Source="{StaticResource ResourceKey=Logo}" Height="150" HorizontalAlignment="Center" Name="LogoMetro" Margin="0 0 0 25" Grid.Row="1" Grid.ColumnSpan="4" / -->
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Margin="0 0 5 5">
+            
+            <TextBlock Text="LONGITUDE" FontFamily="Arial" FontSize="15" FontWeight="Bold" TextAlignment="Left" Padding="20 18 0 10" Background="#5ac5f2"/>
+            <TextBox Text="{Binding Path=Longitude}" Padding="30 0" Background="#252771" FontFamily="Jinky" Foreground="White" FontSize="60"  />
+            <TextBlock Text="LATITUDE" FontFamily="Arial" FontSize="15" FontWeight="Bold" TextAlignment="Left" Padding="20 18 0 10" Background="#5ac5f2"/>
+            <TextBox Text="{Binding Path=Latitude}" Padding="30 0" Background="#252771" FontFamily="Jinky" Foreground="White" FontSize="60"  />
+            <TextBlock Text="DISTANCE" FontFamily="Arial" FontSize="15" FontWeight="Bold" TextAlignment="Left" Padding="20 18 0 10" Background="#5ac5f2"/>
+            <TextBox Text="{Binding Path=Distance}" Padding="30 0" Background="#252771" FontFamily="Jinky" Foreground="White" FontSize="60" />
+            <Button Command="{Binding Path=ResetCommand}" Background="#5ac5f2" Foreground="White">Réinitialiser les données</Button>
+        </StackPanel>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="2" Grid.Row="1" Background="#5ac5f2"  Grid.ColumnSpan="2" Margin="5 0 0 0" Height="350" VerticalAlignment="Top">
+            <ItemsControl ItemsSource="{Binding BusStop}" Foreground="White" FontSize="20" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Key }" Background="#afca00" FontFamily="Arial" FontSize="15" FontWeight="Bold" TextAlignment="Left" Padding="20 18 0 10" ></TextBlock>
+                            <ItemsControl ItemsSource="{Binding Value}" Background="black"  FontFamily="Arial" FontSize="15" FontWeight="Bold" Padding="20 18 0 10" >
+                            </ItemsControl>
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+        <Grid Grid.Row="2" Grid.ColumnSpan="4">
+
+            <Button Cursor="Hand" x:Name="go" Width="123" Height="123" Command="{Binding Path=SaveCommand}" Background="#FFF" BorderBrush="#FFF">
+                <Image Source="/images/go.png" Name="MonImage" MouseEnter="MonImage_MouseEnter" MouseLeave="MonImage_MouseLeave">
+                </Image>
+            </Button>
+        </Grid>
+        <Grid Grid.ColumnSpan="4" Grid.Row="3">
+
+            <TabControl BorderBrush="Gainsboro">
+                <TabControl.Resources>
+                    <Style TargetType="TabItem">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="TabItem">
+                                    <Border Name="Border" BorderThickness="2,2,2,0" BorderBrush="Gainsboro" CornerRadius="4,4,0,0" Margin="2,0">
+                                        <ContentPresenter x:Name="ContentSite"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        ContentSource="Header"
+                                        Margin="10,2" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter TargetName="Border" Property="Background" Value="#e5007d"/>
+                                        </Trigger>
+                                        <Trigger Property="IsSelected" Value="False">
+                                            <Setter TargetName="Border" Property="Background" Value="GhostWhite" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </TabControl.Resources>
+                <TabItem Header="Informations générales">
+                    <Label Content="{Binding Path=Message, UpdateSourceTrigger=PropertyChanged}" FontFamily="Jinky" Foreground="Black" FontSize="60" > 
+                    </Label>
+                    
+                </TabItem>
+                <TabItem Header="Voir la carte du réseau">
+                    <Label>
+                        <m:Map x:Name="MetroBus" CredentialsProvider="Ap4M2GklYDMscyvs8DjNG1Cln6SIQpPdi91LOA4nVYJmUqStWt2iRoQb_5iBZDRt" Mode="road" Margin="0,20,0,0" ZoomLevel="15" Height="300" Width="800" VerticalAlignment="Top" Center="45.1858202, 5.7290103">
+                            <m:Pushpin Location="45.1858202, 5.7290103">
+                            </m:Pushpin>
+                        </m:Map>
+                    </Label>
+                </TabItem>
+            </TabControl>
+
+            
+        </Grid> 
+    </Grid> 
+</Window>

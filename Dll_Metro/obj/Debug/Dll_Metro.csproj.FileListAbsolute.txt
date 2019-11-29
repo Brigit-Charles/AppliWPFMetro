@@ -1,0 +1,9 @@
+C:\Users\brigitte.charles\source\repos\ConsoleApp2\Dll_Metro\obj\Debug\Dll_Metro.csprojAssemblyReference.cache
+C:\Users\brigitte.charles\source\repos\ConsoleApp2\Dll_Metro\obj\Debug\Dll_Metro.csproj.CoreCompileInputs.cache
+C:\Users\brigitte.charles\source\repos\ConsoleApp2\Dll_Metro\bin\Debug\Dll_Metro.dll
+C:\Users\brigitte.charles\source\repos\ConsoleApp2\Dll_Metro\bin\Debug\Dll_Metro.pdb
+C:\Users\brigitte.charles\source\repos\ConsoleApp2\Dll_Metro\obj\Debug\Dll_Metro.dll
+C:\Users\brigitte.charles\source\repos\ConsoleApp2\Dll_Metro\obj\Debug\Dll_Metro.pdb
+C:\Users\brigitte.charles\source\repos\ConsoleApp2\Dll_Metro\bin\Debug\Newtonsoft.Json.dll
+C:\Users\brigitte.charles\source\repos\ConsoleApp2\Dll_Metro\bin\Debug\Newtonsoft.Json.xml
+C:\Users\brigitte.charles\source\repos\ConsoleApp2\Dll_Metro\obj\Debug\Dll_Metro.csproj.CopyComplete

@@ -1,0 +1,9 @@
+C:\Users\brigitte.charles\source\repos\ConsoleApp2\Dll_Metro\bin\Release\Dll_Metro.dll
+C:\Users\brigitte.charles\source\repos\ConsoleApp2\Dll_Metro\bin\Release\Dll_Metro.pdb
+C:\Users\brigitte.charles\source\repos\ConsoleApp2\Dll_Metro\bin\Release\Newtonsoft.Json.dll
+C:\Users\brigitte.charles\source\repos\ConsoleApp2\Dll_Metro\bin\Release\Newtonsoft.Json.xml
+C:\Users\brigitte.charles\source\repos\ConsoleApp2\Dll_Metro\obj\Release\Dll_Metro.csprojAssemblyReference.cache
+C:\Users\brigitte.charles\source\repos\ConsoleApp2\Dll_Metro\obj\Release\Dll_Metro.csproj.CoreCompileInputs.cache
+C:\Users\brigitte.charles\source\repos\ConsoleApp2\Dll_Metro\obj\Release\Dll_Metro.csproj.CopyComplete
+C:\Users\brigitte.charles\source\repos\ConsoleApp2\Dll_Metro\obj\Release\Dll_Metro.dll
+C:\Users\brigitte.charles\source\repos\ConsoleApp2\Dll_Metro\obj\Release\Dll_Metro.pdb
